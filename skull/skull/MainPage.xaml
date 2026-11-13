@@ -15,8 +15,9 @@
                  VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
                  BackgroundColor="Beige" />
             </FlexLayout>
-            <Grid RowSpacing="5" ColumnSpacing="5" Margin="3,0,3,0">
+            <Grid RowSpacing="5" ColumnSpacing="5" Margin="3,0,3,0" x:Name="Target">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
                     <RowDefinition Height="50" />
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
@@ -57,6 +58,17 @@
                 <BoxView Color="LightGray" Grid.Row="1" Grid.Column="4"/>
                 <BoxView Color="LightGray" Grid.Row="1" Grid.Column="5"/>
                 <BoxView Color="LightGray" Grid.Row="1" Grid.Column="6"/>
+
+                <Button Grid.Row="2" Grid.Column="2"
+                        Text="&lt;"
+                        x:Name="leftButton"
+                        Clicked="Onclick"
+                    />
+                <Button Grid.Row="2" Grid.Column="4"
+                        Text="&gt;"
+                        x:Name="rightButton"
+                        Clicked="Onclick"
+                    />
             </Grid>
         </VerticalStackLayout>
     </ScrollView>
