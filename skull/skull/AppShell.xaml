@@ -15,7 +15,12 @@
         <Tab Title="Animation">
             <ShellContent
             ContentTemplate="{DataTemplate local:Animation}"
-            Route="MainPage" /> 
+            Route="Animation" /> 
+        </Tab>
+        <Tab Title="Sensor">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:Sensor}"
+            Route="Sensor" />
         </Tab>
 
     </TabBar>
