@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="skull.Animation"
+             Title="Animation">
+
+    <Grid Padding="20">
+        <VerticalStackLayout Spacing="10">
+
+            <!-- BoxView qui sera animé -->
+            <BoxView x:Name="box"
+                     Margin="0,30,0,0"
+                     Color="Aqua"
+                     WidthRequest="150"
+                     HeightRequest="150"
+                     HorizontalOptions="Center" />
+
+            <!-- Switch de rotation -->
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,25,0,0">
+                <Label x:Name="rotationLabel"
+                       Text="Rotation inactive"
+                       VerticalTextAlignment="Center" />
+                <Switch x:Name="rotationSwitch"
+                        Toggled="OnRotationToggled" />
+            </HorizontalStackLayout>
+
+            <!-- Déplacement avec les boutons -->
+            <HorizontalStackLayout HorizontalOptions="Center" Margin="0,25,0,0">
+                <Button Text="&lt;&lt;"
+                        Clicked="OnMoveLeft" />
+                <Button Text=">>"
+                        Margin="10,0,0,0"
+                        Clicked="OnMoveRight" />
+            </HorizontalStackLayout>
+
+            <!-- Ajustement de la vitesse -->
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <Label x:Name="speedLabel"
+                       Text="Speed 10" />
+                <Slider x:Name="speedSlider"
+                        WidthRequest="150"
+                        Value="10"
+                        Minimum="1"
+                        Maximum="50"
+                        ValueChanged="OnSpeedChanged" />
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

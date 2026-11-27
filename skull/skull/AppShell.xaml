@@ -6,9 +6,18 @@
     xmlns:local="clr-namespace:skull"
     Title="skull">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+        <Tab Title="Skull">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+        </Tab>
+        <Tab Title="Animation">
+            <ShellContent
+            ContentTemplate="{DataTemplate local:Animation}"
+            Route="MainPage" /> 
+        </Tab>
+
+    </TabBar>
 
 </Shell>
